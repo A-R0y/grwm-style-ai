@@ -89,7 +89,7 @@ const ClosetTab = () => {
               <X className="w-7 h-7 text-primary-foreground" />
             </button>
             <h3 className="text-primary-foreground text-xl font-bold text-center mb-8">
-              Add to Wardrobe
+              Add to {uploadCategory || "Wardrobe"}
             </h3>
             <button className="w-full glass rounded-3xl py-6 flex flex-col items-center gap-3 active:scale-95 transition-transform">
               <Camera className="w-8 h-8 text-primary" />
