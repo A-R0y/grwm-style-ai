@@ -20,22 +20,29 @@ const ClosetTab = () => {
           <h2 className="text-lg font-bold mb-4">My Closet</h2>
           <div className="grid grid-cols-2 gap-3">
             {categories.map((cat) => (
-              <button
-                key={cat}
-                onClick={() => setSelectedCategory(cat)}
-                className="relative rounded-3xl overflow-hidden aspect-[4/5] active:scale-95 transition-transform"
-              >
-                <img
-                  src={categoryImages[cat]}
-                  alt={cat}
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 to-transparent" />
-                <div className="absolute bottom-4 left-4">
-                  <p className="text-primary-foreground font-semibold text-sm">{cat}</p>
-                  <p className="text-primary-foreground/70 text-xs">{getCategoryCount(cat)} items</p>
-                </div>
-              </button>
+              <div key={cat} className="relative rounded-3xl overflow-hidden aspect-[4/5]">
+                <button
+                  onClick={() => setSelectedCategory(cat)}
+                  className="w-full h-full active:scale-95 transition-transform"
+                >
+                  <img
+                    src={categoryImages[cat]}
+                    alt={cat}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 to-transparent" />
+                  <div className="absolute bottom-4 left-4">
+                    <p className="text-primary-foreground font-semibold text-sm">{cat}</p>
+                    <p className="text-primary-foreground/70 text-xs">{getCategoryCount(cat)} items</p>
+                  </div>
+                </button>
+                <button
+                  onClick={(e) => { e.stopPropagation(); setUploadCategory(cat); setShowUpload(true); }}
+                  className="absolute top-2 right-2 w-8 h-8 rounded-full glass flex items-center justify-center active:scale-90 transition-transform z-10"
+                >
+                  <Plus className="w-4 h-4 text-primary" />
+                </button>
+              </div>
             ))}
           </div>
         </>
