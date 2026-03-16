@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Sparkles, User, ShirtIcon, Wand2 } from "lucide-react";
+import { User, ShirtIcon, Wand2 } from "lucide-react";
+import grwmLogo from "@/assets/grwm-logo-header.png";
 import { mockUser } from "@/data/mockData";
 import ProfileTab from "./ProfileTab";
 import ClosetTab from "./ClosetTab";
@@ -21,7 +22,7 @@ const MainApp = () => {
       {/* Header */}
       <header className="sticky top-0 z-40 glass px-5 py-3 flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <Sparkles className="w-5 h-5 text-primary" />
+          <img src={grwmLogo} alt="GRWM" className="w-7 h-7 object-contain" />
           <h1 className="text-lg font-bold text-gradient">GRWM</h1>
         </div>
         <img
