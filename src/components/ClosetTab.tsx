@@ -75,7 +75,7 @@ const ClosetTab = () => {
 
       {/* FAB */}
       <button
-        onClick={() => setShowUpload(true)}
+        onClick={() => { setUploadCategory(selectedCategory); setShowUpload(true); }}
         className="fixed bottom-24 right-6 sm:right-auto sm:ml-[calc(50%-1.5rem+12rem)] gradient-primary w-14 h-14 rounded-full flex items-center justify-center shadow-lg shadow-primary/30 active:scale-90 transition-transform z-30"
       >
         <Plus className="w-6 h-6 text-primary-foreground" />
