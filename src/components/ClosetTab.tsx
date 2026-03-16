@@ -56,7 +56,15 @@ const ClosetTab = () => {
             <ArrowLeft className="w-5 h-5" />
             <span className="text-sm font-medium">Back</span>
           </button>
-          <h2 className="text-lg font-bold mb-4">{selectedCategory}</h2>
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="text-lg font-bold">{selectedCategory}</h2>
+            <button
+              onClick={() => { setUploadCategory(selectedCategory); setShowUpload(true); }}
+              className="w-9 h-9 rounded-full gradient-primary flex items-center justify-center active:scale-90 transition-transform"
+            >
+              <Plus className="w-4 h-4 text-primary-foreground" />
+            </button>
+          </div>
           <div className="grid grid-cols-2 gap-3">
             {filteredItems.map((item) => (
               <ClothingCard key={item.id} item={item} />
