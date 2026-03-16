@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Sparkles, User, ShirtIcon, Wand2 } from "lucide-react";
+import { User, ShirtIcon, Wand2 } from "lucide-react";
+import grwmLogo from "@/assets/grwm-logo-header.png";
 import { mockUser } from "@/data/mockData";
 import ProfileTab from "./ProfileTab";
 import ClosetTab from "./ClosetTab";
