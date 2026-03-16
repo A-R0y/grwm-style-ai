@@ -7,6 +7,7 @@ const categories = ["Topwear", "Bottomwear", "Footwear", "Accessories"] as const
 const ClosetTab = () => {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [showUpload, setShowUpload] = useState(false);
+  const [uploadCategory, setUploadCategory] = useState<string | null>(null);
 
   const getCategoryCount = (cat: string) =>
     mockWardrobe.filter((i) => i.category === cat).length;
