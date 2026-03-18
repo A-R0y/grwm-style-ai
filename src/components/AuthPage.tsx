@@ -9,7 +9,8 @@ const AuthPage = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    navigate("/app");
+    const onboarded = localStorage.getItem("grwm-onboarded");
+    navigate(onboarded ? "/app" : "/onboarding");
   };
 
   return (

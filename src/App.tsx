@@ -5,9 +5,9 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index";
 import AuthPage from "./components/AuthPage";
+import OnboardingFlow from "./components/OnboardingFlow";
 import MainApp from "./components/MainApp";
 import NotFound from "./pages/NotFound";
-
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -22,6 +22,7 @@ const App = () => (
               <Routes>
                 <Route path="/" element={<Index />} />
                 <Route path="/auth" element={<AuthPage />} />
+                <Route path="/onboarding" element={<OnboardingFlow />} />
                 <Route path="/app" element={<MainApp />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
