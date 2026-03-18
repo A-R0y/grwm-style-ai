@@ -1,5 +1,6 @@
+import { useNavigate } from "react-router-dom";
 import { mockUser } from "@/data/mockData";
-import { Sparkles, User } from "lucide-react";
+import { Sparkles, User, LogOut } from "lucide-react";
 
 const ProfileTab = () => {
   return (
