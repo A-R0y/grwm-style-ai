@@ -3,6 +3,14 @@ import { mockUser } from "@/data/mockData";
 import { Sparkles, User, LogOut } from "lucide-react";
 
 const ProfileTab = () => {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.removeItem("grwm-onboarded");
+    localStorage.removeItem("grwm-profile");
+    navigate("/");
+  };
+
   return (
     <div className="space-y-5 pb-4">
       {/* Avatar Section */}
