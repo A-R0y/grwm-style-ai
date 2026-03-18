@@ -98,7 +98,7 @@ const OnboardingFlow = () => {
         localStorage.setItem("grwm-onboarded", "true");
         localStorage.setItem(
           "grwm-profile",
-          JSON.stringify({ gender, bodyType: selectedBodyType, selfie: selfiePreview })
+          JSON.stringify({ gender, bodyType: selectedBodyType })
         );
         navigate("/app");
       }, 3500);
