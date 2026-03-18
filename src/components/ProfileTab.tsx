@@ -66,6 +66,15 @@ const ProfileTab = () => {
           ))}
         </div>
       </div>
+
+      {/* Logout */}
+      <button
+        onClick={handleLogout}
+        className="w-full glass rounded-3xl p-4 flex items-center justify-center gap-2 text-destructive font-medium text-sm active:scale-95 transition-transform"
+      >
+        <LogOut className="w-4 h-4" />
+        Log Out
+      </button>
     </div>
   );
 };
