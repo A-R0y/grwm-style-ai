@@ -1,7 +1,16 @@
+import { useNavigate } from "react-router-dom";
 import { mockUser } from "@/data/mockData";
-import { Sparkles, User } from "lucide-react";
+import { Sparkles, User, LogOut } from "lucide-react";
 
 const ProfileTab = () => {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.removeItem("grwm-onboarded");
+    localStorage.removeItem("grwm-profile");
+    navigate("/");
+  };
+
   return (
     <div className="space-y-5 pb-4">
       {/* Avatar Section */}
@@ -57,6 +66,15 @@ const ProfileTab = () => {
           ))}
         </div>
       </div>
+
+      {/* Logout */}
+      <button
+        onClick={handleLogout}
+        className="w-full glass rounded-3xl p-4 flex items-center justify-center gap-2 text-destructive font-medium text-sm active:scale-95 transition-transform"
+      >
+        <LogOut className="w-4 h-4" />
+        Log Out
+      </button>
     </div>
   );
 };
